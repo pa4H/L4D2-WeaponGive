@@ -18,9 +18,8 @@ public OnPluginStart()
 	HookEvent("scavenge_round_start", resetLimits, EventHookMode_Pre);
 	HookEvent("round_end", resetLimits, EventHookMode_Pre);
 	
-	//RegConsoleCmd("sm_test", debb, "");
 	RegConsoleCmd("sm_w", showMenu);
-	RegConsoleCmd("sm_guns", showGunsMenu);
+	RegConsoleCmd("sm_t1", showGunsMenu);
 	RegConsoleCmd("sm_melee", showMeleeMenu);
 	
 	// Guns
@@ -42,10 +41,6 @@ public OnPluginStart()
 	RegConsoleCmd("sm_fryingpan", gPan);
 	
 	LoadTranslations("pa4HWhe.phrases");
-}
-stock Action debb(int client, int args) // DEBUG
-{
-	return Plugin_Handled;
 }
 
 Action gPump(int client, int args)
